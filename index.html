@@ -1,3 +1,6 @@
+PRABU | AI & ML Student Portfolio
+
+Below is the complete HTML portfolio code. Save it as "index.html" and open it in your browser.
 
 <!DOCTYPE html>
 <html lang="en">
@@ -5,10 +8,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Azeem | AI & ML Student Portfolio</title>
-
+  <title>Prabu | AI & ML Student Portfolio</title>
   <meta name="description"
-    content="Azeem's portfolio - AIML student interested in Python, Artificial Intelligence, Machine Learning and software development.">
+    content="Portfolio of Prabu, a Computer Science engineering student specializing in Artificial Intelligence and Machine Learning.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,19 +22,21 @@
     :root {
       --bg: #0b1120;
       --card: #111827;
+      --card-light: #172033;
       --border: #263247;
       --text: #f1f5f9;
       --muted: #94a3b8;
       --primary: #60a5fa;
       --secondary: #38bdf8;
       --accent: #a78bfa;
+      --success: #4ade80;
       --max-width: 1050px;
     }
 
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
 
     html {
@@ -60,9 +64,9 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(11, 17, 32, 0.95);
-      border-bottom: 1px solid var(--border);
+      background: rgba(11, 17, 32, 0.92);
       backdrop-filter: blur(15px);
+      border-bottom: 1px solid var(--border);
     }
 
     .nav-container {
@@ -74,24 +78,25 @@
 
     .logo {
       font-family: "Space Grotesk", sans-serif;
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       font-weight: 700;
+      color: white;
     }
 
-    .logo span,
-    .hero h1 span {
+    .logo span {
       color: var(--primary);
     }
 
     .nav-links {
       display: flex;
-      gap: 1.2rem;
+      gap: 1.3rem;
       list-style: none;
     }
 
     .nav-links a {
       color: var(--muted);
       font-size: 0.85rem;
+      transition: 0.3s;
     }
 
     .nav-links a:hover {
@@ -99,52 +104,53 @@
     }
 
     .hero {
-      min-height: 600px;
+      min-height: 620px;
       display: flex;
       align-items: center;
-      padding: 90px 0;
-      background: radial-gradient(
-        circle at 80% 20%,
-        rgba(96, 165, 250, 0.15),
-        transparent 35%
-      );
+      padding: 90px 0 70px;
+      background:
+        radial-gradient(
+          circle at 80% 20%,
+          rgba(96, 165, 250, 0.14),
+          transparent 30%
+        );
     }
 
     .hero-content {
       max-width: 800px;
     }
 
-    .hello,
-    .section-label {
+    .hello {
       color: var(--primary);
-      font-size: 0.85rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      margin-bottom: 0.7rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
     }
 
     .hero h1 {
       font-family: "Space Grotesk", sans-serif;
-      font-size: clamp(2.8rem, 7vw, 5rem);
+      font-size: clamp(2.7rem, 7vw, 5rem);
       line-height: 1.1;
-      margin-bottom: 1rem;
+      margin-bottom: 1.3rem;
+    }
+
+    .hero h1 span {
+      color: var(--primary);
     }
 
     .hero-role {
+      font-size: 1.25rem;
       color: var(--muted);
-      font-size: 1.2rem;
-      margin-bottom: 1.2rem;
+      margin-bottom: 1.3rem;
     }
 
     .hero-description {
-      color: var(--muted);
       max-width: 680px;
+      color: var(--muted);
       margin-bottom: 2rem;
     }
 
-    .buttons,
-    .contact-links,
-    .tags {
+    .buttons {
       display: flex;
       gap: 1rem;
       flex-wrap: wrap;
@@ -154,8 +160,8 @@
       display: inline-block;
       padding: 0.75rem 1.3rem;
       border-radius: 8px;
-      font-size: 0.9rem;
       font-weight: 600;
+      font-size: 0.9rem;
       transition: 0.3s;
     }
 
@@ -165,26 +171,36 @@
     }
 
     .btn-primary:hover {
-      background: var(--secondary);
       transform: translateY(-2px);
+      background: var(--secondary);
     }
 
     .btn-outline {
       border: 1px solid var(--border);
+      color: var(--text);
     }
 
     .btn-outline:hover {
-      color: var(--primary);
       border-color: var(--primary);
+      color: var(--primary);
     }
 
     section {
-      padding: 75px 0;
+      padding: 80px 0;
       scroll-margin-top: 70px;
     }
 
     .section-heading {
-      margin-bottom: 2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .section-label {
+      color: var(--primary);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
     }
 
     .section-heading h2 {
@@ -192,11 +208,15 @@
       font-size: 2rem;
     }
 
-    .section-heading p,
-    .about-text {
+    .section-heading p {
       color: var(--muted);
-      max-width: 750px;
-      margin-top: 0.6rem;
+      margin-top: 0.5rem;
+      max-width: 650px;
+    }
+
+    .about-text {
+      max-width: 800px;
+      color: var(--muted);
     }
 
     .highlight {
@@ -206,21 +226,21 @@
 
     .skills-grid,
     .projects,
-    .learning-grid {
+    .learning-grid,
+    .achievement-list {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1.2rem;
+      gap: 1rem;
     }
 
     .skill-card,
     .project,
     .learning-card,
-    .achievement,
-    .contact-box {
+    .achievement {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 12px;
-      padding: 1.5rem;
+      padding: 1.4rem;
       transition: 0.3s;
     }
 
@@ -234,15 +254,13 @@
     .skill-card h3,
     .learning-card h3 {
       font-size: 1rem;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.4rem;
     }
 
     .skill-card p,
-    .learning-card p,
-    .project p,
-    .project ul {
+    .learning-card p {
       color: var(--muted);
-      font-size: 0.88rem;
+      font-size: 0.85rem;
     }
 
     .project-number {
@@ -254,13 +272,19 @@
     .project h3 {
       font-family: "Space Grotesk", sans-serif;
       font-size: 1.2rem;
-      margin: 0.5rem 0;
+      margin: 0.4rem 0;
     }
 
     .project-tech {
       color: var(--accent);
       font-size: 0.8rem;
-      margin-bottom: 0.8rem;
+      margin-bottom: 0.7rem;
+    }
+
+    .project p,
+    .project ul {
+      color: var(--muted);
+      font-size: 0.88rem;
     }
 
     .project ul {
@@ -274,31 +298,33 @@
 
     .timeline-item {
       position: relative;
+      margin-bottom: 2rem;
     }
 
     .timeline-item::before {
       content: "";
       position: absolute;
-      left: -1.9rem;
-      top: 8px;
       width: 10px;
       height: 10px;
       border-radius: 50%;
       background: var(--primary);
+      left: -1.9rem;
+      top: 7px;
     }
 
     .timeline-item h3 {
       font-size: 1.05rem;
     }
 
-    .timeline-item .institution {
+    .institution {
       color: var(--primary);
-      margin: 0.4rem 0;
+      font-size: 0.9rem;
+      margin: 0.2rem 0;
     }
 
     .timeline-item p {
       color: var(--muted);
-      font-size: 0.9rem;
+      font-size: 0.88rem;
     }
 
     .status {
@@ -306,21 +332,28 @@
       margin-top: 0.8rem;
       padding: 0.25rem 0.65rem;
       border-radius: 20px;
-      background: rgba(96, 165, 250, 0.12);
-      color: var(--primary);
+      background: rgba(74, 222, 128, 0.1);
+      color: var(--success);
       font-size: 0.72rem;
       font-weight: 600;
     }
 
-    .achievement-list {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0.8rem;
-    }
-
     .achievement {
       color: var(--muted);
-      font-size: 0.88rem;
+      font-size: 0.85rem;
+    }
+
+    .achievement::before {
+      content: "✓";
+      color: var(--success);
+      font-weight: bold;
+      margin-right: 0.5rem;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
     }
 
     .tag {
@@ -333,7 +366,14 @@
     }
 
     .contact-box {
-      background: linear-gradient(135deg, var(--card), #172033);
+      background: linear-gradient(
+        135deg,
+        var(--card),
+        var(--card-light)
+      );
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      padding: 2rem;
     }
 
     .contact-box p {
@@ -341,16 +381,25 @@
       margin-bottom: 1.5rem;
     }
 
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
     .contact-link {
+      display: inline-block;
       padding: 0.7rem 1rem;
       border: 1px solid var(--border);
       border-radius: 8px;
+      color: var(--text);
       font-size: 0.85rem;
+      transition: 0.3s;
     }
 
     .contact-link:hover {
-      color: var(--primary);
       border-color: var(--primary);
+      color: var(--primary);
     }
 
     footer {
@@ -368,17 +417,17 @@
 
       .hero {
         min-height: auto;
-        padding: 75px 0;
+        padding: 80px 0 60px;
       }
 
       section {
-        padding: 55px 0;
+        padding: 60px 0;
       }
 
       .skills-grid,
-      .projects,
       .learning-grid,
-      .achievement-list {
+      .achievement-list,
+      .projects {
         grid-template-columns: 1fr;
       }
 
@@ -396,10 +445,9 @@
 <body>
 
   <!-- NAVIGATION -->
-
   <nav>
     <div class="container nav-container">
-      <a href="#home" class="logo">A<span>.</span> AZEEM</a>
+      <a href="#home" class="logo">P<span>.</span> PRABU</a>
 
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
@@ -413,25 +461,23 @@
   </nav>
 
   <!-- HERO -->
-
   <header class="hero" id="home">
     <div class="container">
       <div class="hero-content">
-
         <div class="hello">HELLO, I'M</div>
 
-        <h1>Azeem <span>.</span></h1>
+        <h1>Prabu <span>.</span></h1>
 
         <div class="hero-role">
-          2nd-Year Computer Science Student | AI & ML
+          B.E. Computer Science Student | AI & ML
         </div>
 
         <p class="hero-description">
-          I'm an Artificial Intelligence and Machine Learning
-          student passionate about Python programming, software
-          development, data structures and AI-based applications.
-          I enjoy learning new technologies, solving coding
-          problems and building practical projects.
+          I am an Artificial Intelligence and Machine Learning
+          student interested in Python programming, software
+          development, web development and practical technology
+          projects. I enjoy learning new technologies and
+          improving my coding skills by building useful applications.
         </p>
 
         <div class="buttons">
@@ -443,102 +489,95 @@
             Contact Me
           </a>
         </div>
-
       </div>
     </div>
   </header>
 
   <!-- ABOUT -->
-
   <section id="about">
     <div class="container">
-
       <div class="section-heading">
-        <div class="section-label">ABOUT ME</div>
-        <h2>Learning today, building for tomorrow</h2>
+        <div class="section-label">About Me</div>
+        <h2>Learning, building and improving</h2>
       </div>
 
       <p class="about-text">
-        I'm <span class="highlight">Azeem</span>, a second-year
-        college student studying Artificial Intelligence and
-        Machine Learning (AIML) in Tamil Nadu.
+        I'm <span class="highlight">Prabu</span>, a second-year
+        engineering student specializing in Artificial Intelligence
+        and Machine Learning.
 
         <br><br>
 
-        I'm interested in Python, C programming, C++, data
-        structures, Artificial Intelligence, Machine Learning
-        and web development.
+        I am interested in Python, C, C++, data structures,
+        artificial intelligence, machine learning and application
+        development.
 
         <br><br>
 
-        I want to improve my coding skills, develop useful
-        applications and strengthen my technical knowledge.
-        My career goal is to become a software engineer and
-        work on innovative technology projects.
+        I enjoy practicing programming, solving technical problems
+        and exploring new technologies. My goal is to become a
+        software engineer, strengthen my coding skills and develop
+        practical applications that solve real-world problems.
       </p>
-
     </div>
   </section>
 
-  <!-- SKILLS -->
-
+  <!-- TECHNICAL SKILLS -->
   <section id="skills">
     <div class="container">
-
       <div class="section-heading">
-        <div class="section-label">TECHNICAL SKILLS</div>
-        <h2>Technologies I'm learning</h2>
-        <p>My current programming and development interests.</p>
+        <div class="section-label">Technical Skills</div>
+        <h2>What I'm learning</h2>
       </div>
 
       <div class="skills-grid">
 
         <div class="skill-card">
           <h3>Python Programming</h3>
-          <p>Learning Python syntax, functions, problem solving
-          and practical application development.</p>
+          <p>
+            Practicing Python fundamentals, problem solving
+            and application development.
+          </p>
         </div>
 
         <div class="skill-card">
           <h3>C Programming</h3>
-          <p>Practicing arrays, functions, pointers, structures
-          and file operations.</p>
+          <p>
+            Learning programming fundamentals, functions,
+            pointers, arrays and file handling.
+          </p>
         </div>
 
         <div class="skill-card">
           <h3>C++ Programming</h3>
-          <p>Developing programming fundamentals and
-          problem-solving skills.</p>
+          <p>
+            Developing programming logic and learning
+            object-oriented programming concepts.
+          </p>
         </div>
 
         <div class="skill-card">
           <h3>Data Structures</h3>
-          <p>Studying linked lists, stacks, queues, trees,
-          graphs, sorting and hashing.</p>
+          <p>
+            Practicing linked lists, stacks, queues,
+            trees, graphs, sorting and hashing.
+          </p>
         </div>
 
         <div class="skill-card">
           <h3>Artificial Intelligence & ML</h3>
-          <p>Exploring machine learning concepts, datasets
-          and AI-based applications.</p>
+          <p>
+            Exploring AI concepts, machine learning models
+            and practical applications.
+          </p>
         </div>
 
         <div class="skill-card">
           <h3>Web Development</h3>
-          <p>Building web pages and learning HTML, CSS
-          and JavaScript.</p>
-        </div>
-
-        <div class="skill-card">
-          <h3>Arduino & Electronics</h3>
-          <p>Exploring sensor connections, microcontrollers
-          and practical hardware projects.</p>
-        </div>
-
-        <div class="skill-card">
-          <h3>Data Analysis</h3>
-          <p>Practicing Python libraries such as NumPy,
-          pandas and scikit-learn.</p>
+          <p>
+            Learning HTML, CSS and JavaScript to create
+            interactive websites.
+          </p>
         </div>
 
       </div>
@@ -546,16 +585,16 @@
   </section>
 
   <!-- PROJECTS -->
-
   <section id="projects">
     <div class="container">
-
       <div class="section-heading">
-        <div class="section-label">MY PROJECTS</div>
-        <h2>Projects & Practical Learning</h2>
+        <div class="section-label">Projects</div>
+        <h2>My Projects</h2>
+
         <p>
-          Projects related to programming, AI-based analysis
-          and electronics.
+          A selection of programming and practical technology
+          projects. Add your project links and screenshots as
+          you complete more work.
         </p>
       </div>
 
@@ -564,52 +603,47 @@
         <div class="project">
           <div class="project-number">PROJECT 01</div>
 
-          <h3>Shock Detection Alert System</h3>
+          <h3>Shock Detection System</h3>
 
           <div class="project-tech">
             Arduino • Shock Sensor • Embedded Systems
           </div>
 
           <p>
-            A sensor-based project designed to detect a shock
-            or vibration using an Arduino and display a detection
-            message through the serial monitor.
+            A sensor-based project that detects a shock or
+            vibration and displays a notification through
+            the Arduino Serial Monitor.
           </p>
 
           <ul>
             <li>Connects a shock sensor to an Arduino board.</li>
-            <li>Reads sensor input using a digital pin.</li>
-            <li>Displays a shock-detected message.</li>
-            <li>Introduces hardware and software integration.</li>
+            <li>Reads sensor signals through a digital input.</li>
+            <li>Displays a shock-detected message when triggered.</li>
+            <li>Introduces basic hardware and sensor programming.</li>
           </ul>
         </div>
 
         <div class="project">
           <div class="project-number">PROJECT 02</div>
 
-          <h3>XAUUSD Chart Lab</h3>
+          <h3>Python Programming Projects</h3>
 
           <div class="project-tech">
-            Python • Streamlit • EMA • RSI • MACD
+            Python • Programming Logic • Problem Solving
           </div>
 
           <p>
-            A Python-based chart analysis application concept
-            for exploring gold market charts and technical
-            indicators through an interactive interface.
+            A collection of Python practice programs designed
+            to improve programming fundamentals and logical
+            thinking.
           </p>
 
           <ul>
-            <li>Explores EMA 20, EMA 50 and EMA 200.</li>
-            <li>Includes RSI and MACD indicator calculations.</li>
-            <li>Uses Streamlit to create a web interface.</li>
-            <li>Supports educational chart analysis and learning.</li>
+            <li>Practices conditions, loops and functions.</li>
+            <li>Explores lists, arrays and numerical operations.</li>
+            <li>Develops small interactive programs.</li>
+            <li>Builds a foundation for future AI and ML projects.</li>
           </ul>
-
-          <p style="margin-top: 12px;">
-            Note: Indicator analysis does not guarantee
-            profitable trading signals.
-          </p>
         </div>
 
       </div>
@@ -617,64 +651,67 @@
   </section>
 
   <!-- EDUCATION -->
-
   <section id="education">
     <div class="container">
-
       <div class="section-heading">
-        <div class="section-label">EDUCATION</div>
-        <h2>My Academic Journey</h2>
+        <div class="section-label">Education</div>
+        <h2>Academic Journey</h2>
       </div>
 
       <div class="timeline">
-
         <div class="timeline-item">
           <h3>
-            Bachelor of Engineering — Artificial Intelligence
-            and Machine Learning
+            B.E. Computer Science and Engineering
+            — Artificial Intelligence & Machine Learning
           </h3>
 
           <div class="institution">
-            College in Tamil Nadu
+            College details to be added
           </div>
 
           <p>
-            Currently pursuing second-year undergraduate studies
-            with an interest in programming, AI, ML and software
-            development.
+            Currently pursuing the second year of undergraduate
+            engineering studies, with an interest in programming,
+            AI, machine learning and software development.
           </p>
         </div>
-
       </div>
     </div>
   </section>
 
   <!-- CURRENTLY LEARNING -->
-
   <section id="learning">
     <div class="container">
-
       <div class="section-heading">
-        <div class="section-label">CURRENTLY LEARNING</div>
-        <h2>Improving my technical foundation</h2>
+        <div class="section-label">Currently Learning</div>
+        <h2>Growing my technical foundation</h2>
       </div>
 
       <div class="learning-grid">
 
         <div class="learning-card">
-          <h3>Data Structures & Algorithms</h3>
+          <h3>Python Programming</h3>
           <p>
-            Practicing trees, graphs, hashing, linked lists,
-            stacks, queues and algorithm design.
+            Improving coding skills through practical exercises,
+            small projects and programming challenges.
           </p>
           <span class="status">ONGOING</span>
         </div>
 
         <div class="learning-card">
-          <h3>Python & Machine Learning</h3>
+          <h3>Data Structures & Algorithms</h3>
           <p>
-            Improving Python programming and exploring
-            machine learning using scikit-learn.
+            Learning data organization, searching, sorting,
+            hashing, trees, graphs and algorithm efficiency.
+          </p>
+          <span class="status">ONGOING</span>
+        </div>
+
+        <div class="learning-card">
+          <h3>Artificial Intelligence & ML</h3>
+          <p>
+            Exploring machine learning fundamentals and
+            developing the skills needed to build AI applications.
           </p>
           <span class="status">ONGOING</span>
         </div>
@@ -682,17 +719,8 @@
         <div class="learning-card">
           <h3>Web Development</h3>
           <p>
-            Learning to create responsive websites using
-            HTML, CSS and JavaScript.
-          </p>
-          <span class="status">ONGOING</span>
-        </div>
-
-        <div class="learning-card">
-          <h3>Practical Projects</h3>
-          <p>
-            Developing programming projects and exploring
-            hardware and application development.
+            Practicing HTML, CSS and JavaScript to build
+            responsive and user-friendly websites.
           </p>
           <span class="status">ONGOING</span>
         </div>
@@ -701,40 +729,35 @@
     </div>
   </section>
 
-  <!-- GOALS -->
-
-  <section id="goals">
+  <!-- ACHIEVEMENTS -->
+  <section id="achievements">
     <div class="container">
-
       <div class="section-heading">
-        <div class="section-label">CAREER GOALS</div>
-        <h2>What I'm working towards</h2>
+        <div class="section-label">Achievements</div>
+        <h2>Certifications & Learning</h2>
+
+        <p>
+          Use this section to showcase completed courses,
+          certificates, workshops and technical achievements.
+        </p>
       </div>
 
       <div class="achievement-list">
 
         <div class="achievement">
-          Improve problem-solving and coding skills.
+          Python programming practice
         </div>
 
         <div class="achievement">
-          Build practical Python and AI/ML projects.
+          Data structures and algorithms practice
         </div>
 
         <div class="achievement">
-          Develop strong data structures and algorithm skills.
+          Arduino shock detection project
         </div>
 
         <div class="achievement">
-          Create useful applications and professional websites.
-        </div>
-
-        <div class="achievement">
-          Gain practical software development experience.
-        </div>
-
-        <div class="achievement">
-          Become a skilled software engineer.
+          AI and machine learning exploration
         </div>
 
       </div>
@@ -742,12 +765,10 @@
   </section>
 
   <!-- INTERESTS -->
-
   <section id="interests">
     <div class="container">
-
       <div class="section-heading">
-        <div class="section-label">INTERESTS</div>
+        <div class="section-label">Interests</div>
         <h2>Areas I'm exploring</h2>
       </div>
 
@@ -758,33 +779,27 @@
         <span class="tag">C Programming</span>
         <span class="tag">C++</span>
         <span class="tag">Data Structures</span>
-        <span class="tag">Software Engineering</span>
+        <span class="tag">Software Development</span>
         <span class="tag">Web Development</span>
         <span class="tag">Arduino Projects</span>
         <span class="tag">Application Development</span>
-        <span class="tag">Data Analysis</span>
       </div>
-
     </div>
   </section>
 
   <!-- CONTACT -->
-
   <section id="contact">
     <div class="container">
-
       <div class="section-heading">
-        <div class="section-label">CONTACT</div>
+        <div class="section-label">Contact</div>
         <h2>Let's connect</h2>
       </div>
 
       <div class="contact-box">
-
         <p>
-          I'm interested in learning new technologies,
-          collaborating on projects and exploring opportunities
-          related to software development, Artificial Intelligence
-          and Machine Learning.
+          I'm interested in learning, collaborating on projects
+          and exploring opportunities related to software
+          development, Artificial Intelligence and Machine Learning.
           Feel free to connect with me.
         </p>
 
@@ -796,19 +811,19 @@
             ✉ Email Me
           </a>
 
-          <!-- Replace with your GitHub profile -->
+          <!-- Replace with your actual GitHub URL -->
           <a href="https://github.com/YOUR_USERNAME"
+             class="contact-link"
              target="_blank"
-             rel="noopener noreferrer"
-             class="contact-link">
+             rel="noopener noreferrer">
             GitHub
           </a>
 
-          <!-- Replace with your LinkedIn profile -->
-          <a href="https://www.linkedin.com/in/YOUR_USERNAME"
+          <!-- Replace with your actual LinkedIn URL -->
+          <a href="https://www.linkedin.com/in/YOUR_USERNAME/"
+             class="contact-link"
              target="_blank"
-             rel="noopener noreferrer"
-             class="contact-link">
+             rel="noopener noreferrer">
             LinkedIn
           </a>
 
@@ -818,11 +833,10 @@
   </section>
 
   <!-- FOOTER -->
-
   <footer>
     <div class="container">
       <p>
-        © <span id="year"></span> Azeem.
+        © <span id="year"></span> Prabu.
         Built with HTML and CSS.
       </p>
     </div>
@@ -835,3 +849,5 @@
 
 </body>
 </html>
+
+Before publishing: replace the email, GitHub, LinkedIn, and college placeholders with your real details. The project and achievement descriptions are starter content; keep only the items that accurately represent your work.
